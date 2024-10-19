@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naat Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <img src="img/library.png" class="icon" id="menu-icon">
+
+      <nav>
+        <img src="img/cancel.png" class="icon" id="cancel-icon">
+        <h3>Naat Player</h3>
+        <div class="all-songs" id="all-songs-container">
+          <div class="menu-item">
+            <img src="img/all-songs.webp" class="icon">
+            <span>All Naat</span>
+          </div>
+        </div>
+        <ul id="all-songs"></ul>
+        <div id="add-song-btn">
+          <div class="menu-item">
+            <img src="img/add.png" class="icon add-icon" id="add-icon" />
+            <span>Add New Naat</span>
+          </div>
+        </div>
+        <div class="new-song-container" id="new-song-container">
+          <form>
+            <input type="file" id="file-picker" accept="audio/*" multiple/>
+          </form>
+        </div>
+      </nav>
+
+      <div class="music-card">
+        <div id="album-img"></div>
+    
+        <div class="icons">
+          <div class="track-slider">
+            <input
+              type="range"
+              value="0"
+              min="1"
+              max="100"
+              id="track-slider"
+              class="track-slider"
+            />
+          </div>
+          <div>
+            <img src="img/mix.png" class="icon" id="mix" />
+            <img src="img/prev-song.png" class="icon" id="left" />
+            <span class="icon" id="play">►</span>
+            <img src="img/next-song.png" class="icon" id="right" />
+            <img src="img/repeat.png" class="icon" id="repeat" />
+          </div>
+
+          <div class="volume">
+            <img src="img/volume.png" class="icon" id="volume" />
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="60"
+              id="volume-slider"
+            />
+          </div>
+        </div>
+        <footer>
+          <span class="title">Now Playing</span>
+          <h2 id="current-song-name">Hamna Ankho Se Dekha Nhi Hai</h2>
+          <span id="change-warning"></span>
+        </footer>
+        <audio id="music" src="naat/Humne Ankhoon Sa Dekha Nahi Hai Magar Naat MP3 Download.mp3"></audio>
+      </div>
+    </div>
+  </body>
+</html>
